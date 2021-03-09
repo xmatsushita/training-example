@@ -20,10 +20,10 @@
 属性値と仕様
 - code(銘柄コード): String
 - date(日付): Date
-- open(始値): BigDecimal - 日中株価の一番最初の株価
-- high(高値): BigDecimal - 日中株価の中で一番高い株価
-- low(安値): BigDecimal - 日中株価の中で一番低い株価
-- close(終値): BigDecimal - 日中株価の一番最後の株価
+- open(始値): Integer - 日中株価の一番最初の株価
+- high(高値): Integer - 日中株価の中で一番高い株価
+- low(安値): Integer - 日中株価の中で一番低い株価
+- close(終値): Integer - 日中株価の一番最後の株価
 
 日足クラスのメソッド
 - white_candlestick? : Boolean 始値よりも終値の方が高ければ真を返す（陽線）
