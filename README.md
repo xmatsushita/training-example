@@ -1,10 +1,12 @@
 ## ファイル構成
 ファイルを増減することは自由です
 
+```
 ├── app
 |    └── create_daily_bar_service.rb
 └── spec
      └── create_daily_bar_service_spec.rb
+```
 
 ## 環境
 - Ruby: 2.7.2
