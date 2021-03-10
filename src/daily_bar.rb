@@ -11,6 +11,6 @@ class DailyBar
   end
 
   def white_candlestick?
-    false
+    @open < @close
   end
 end
