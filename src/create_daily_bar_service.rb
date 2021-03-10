@@ -10,13 +10,13 @@ class CreateDailyBarService
   # @return [DailyBar]
 
   def call
-    @prices.delete_at(0)
+    hash = @prices[1..-1].map {|n| Hash[@prices[0].zip(n)]}
     DailyBar.new(
-      code: @prices[1][0],
-      date: Date.parse(@prices[1][1]),
-      open: @prices.sort {|a,b| a[1] <=> b[1]}[0][2],
-      high: @prices.max {|x,y| x[2] <=> y[2] }[2],
-      low: @prices.min {|x,y| x[2] <=> y[2] }[2],
-      close: @prices.sort {|a,b| a[1] <=> b[1]}.last[2])
+      code: hash[0]['銘柄コード'],
+      date: Date.parse(hash[0]['時刻']),
+      open: hash.sort {|a,b| a['時刻'] <=> b['時刻']}[0]['株価'],
+      high: hash.max {|x,y| x['株価'] <=> y['株価'] }['株価'],
+      low: hash.min {|x,y| x['株価'] <=> y['株価'] }['株価'],
+      close: hash.sort {|a,b| a['時刻'] <=> b['時刻']}.last['株価'])
   end
 end
