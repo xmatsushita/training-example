@@ -1,3 +1,9 @@
+## 環境構築
+```
+git clone https://github.com/xmatsushita/training-example.git
+docker-compose run app guard
+```
+
 ## ファイル構成
 ファイルを増減することは自由です
 
