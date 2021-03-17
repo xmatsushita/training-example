@@ -16,13 +16,31 @@ describe CreateDailyBarService do
 
   subject(:daily_bar) { CreateDailyBarService.new(prices).call }
 
-  it '日足が生成される' do
+  it '銘柄コード' do
     expect(daily_bar.code).to eq('4436')
+  end
+
+  it '日付' do
     expect(daily_bar.date).to eq(Date.new(2021,3,10))
+  end
+
+  it '始値' do
     expect(daily_bar.open).to eq(3605)
+  end
+
+  it '高値' do
     expect(daily_bar.high).to eq(3655)
+  end
+
+  it '安値' do
     expect(daily_bar.low).to eq(3505)
+  end
+
+  it '終値' do
     expect(daily_bar.close).to eq(3635)
+  end
+
+  it '始値' do
     expect(daily_bar.white_candlestick?).to be(true)
   end
 end
