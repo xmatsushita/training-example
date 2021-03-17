@@ -8,7 +8,7 @@ docker-compose run app guard
 ファイルを増減することは自由です
 
 ```
-├── app
+├── src
 |    └── create_daily_bar_service.rb
 └── spec
      └── create_daily_bar_service_spec.rb
@@ -32,5 +32,5 @@ docker-compose run app guard
 - close(終値): Integer - 日中株価の一番最後の株価
 
 日足クラスのメソッド
-- white_candlestick? : Boolean 始値よりも終値の方が高ければ真を返す（陽線）
+- white_bar? : Boolean 始値よりも終値の方が高ければ真を返す（陽線）
 ```
