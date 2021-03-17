@@ -40,7 +40,7 @@ describe CreateDailyBarService do
     expect(daily_bar.close).to eq(3635)
   end
 
-  it '始値' do
-    expect(daily_bar.white_candlestick?).to be(true)
+  it '陽線ならば真' do
+    expect(daily_bar.white_bar?).to be(true)
   end
 end
