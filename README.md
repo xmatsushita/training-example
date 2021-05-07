@@ -1,6 +1,7 @@
 ## 環境構築
 ```
 git clone https://github.com/xmatsushita/training-example.git
+cd training-example
 docker-compose run app guard
 ```
 
